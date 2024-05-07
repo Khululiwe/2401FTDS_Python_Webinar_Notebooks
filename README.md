@@ -45,28 +45,20 @@ To carry out all the objectives for this repo, the following necessary dependenc
 
 It's highly recommended to use a virtual environment for your projects, there are many ways to do this; we've outlined one such method below. Make sure to regularly update this section. This way, anyone who clones your repository will know exactly what steps to follow to prepare the necessary environment. The instructions provided here should enable a person to clone your repo and quickly get started.
 
-### Setup - you only need to do this once
+### Create the new evironment - you only need to do this once
 
 ```bash
-# make sure your pip in your base Python installation is up-to-date
-python3 -m pip install -U pip
-# install the virtualenv package
-python3 -m pip install virtualenv
-```
-
-### Create the virtual environment - also typically only run when needed
-
-```bash
-# create a virtual environment in this directory called '.venv'
-python3 -m venv .venv
-# you should now see the folder `.venv` in your repo
+# create the conda environment
+conda create --name <env>
 ```
 
 ### This is how you activate the virtual environment in a terminal and install the project dependencies
 
 ```bash
 # activate the virtual environment
-source .venv/bin/activate
+conda activate <env>
+# install the pip package
+conda install pip
 # install the requirements for this project
 pip install -r requirements.txt
 ```
